@@ -9,10 +9,14 @@
 import UIKit
 
 class thirdViewController: UIViewController {
-
+    @IBAction func handleBackButton(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+//ナビゲーションバーの非表示
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         // Do any additional setup after loading the view.
     }
     
