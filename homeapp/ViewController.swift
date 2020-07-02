@@ -39,7 +39,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Cellに値を設定する.
         let save = saveArray[indexPath.row]
         cell.textLabel?.text = save.name
-
+        cell.detailTextLabel?.text = save.contents
+        
         //let formatter = DateFormatter()
         //formatter.dateFormat = "yyyy-MM-dd HH:mm"
 
