@@ -16,8 +16,25 @@ class InputViewController: UIViewController {
     
     let realm = try! Realm()
     var save: Save!
+    //@IBOutlet weak var handleDoneButton: UIButton!
+    @IBAction func handleDoneButton(_ sender: Any) {
+        try! realm.write {
+            self.save.name = self.nameTextField.text!
+            self.save.contents = self.contentsTextView.text
+            //self.task.date = self.datePicker.date
+            self.realm.add(self.save, update: .modified)
+        }
+    }
+    
+    @IBAction func handleCancelButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //ナビゲーションバーの非表示
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         // 背景をタップしたらdismissKeyboardメソッドを呼ぶように設定する
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
@@ -31,13 +48,7 @@ class InputViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        try! realm.write {
-            self.save.name = self.nameTextField.text!
-            self.save.contents = self.contentsTextView.text
-            //self.task.date = self.datePicker.date
-            self.realm.add(self.save, update: .modified)
-        }
-
+        
         super.viewWillDisappear(animated)
     }
     
