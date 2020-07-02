@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let realm = try! Realm()
     
-    var saveArray = try! Realm().objects(Save.self).sorted(byKeyPath: "date", ascending: true)
+    var saveArray = try! Realm().objects(Save.self).sorted(byKeyPath: "date", ascending: false)
     
     
     override func viewDidLoad() {
