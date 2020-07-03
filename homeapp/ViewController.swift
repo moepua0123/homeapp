@@ -23,6 +23,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        //ナビゲーションバーの色の設定
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 1.0, green: 0.8, blue: 1.0, alpha: 0.2)
+        
+        self.navigationController?.navigationBar.tintColor = .white
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [
+        // 文字の色
+            .foregroundColor: UIColor.white
+        ]
     }
     
     // データの数（＝セルの数）を返すメソッド

@@ -36,6 +36,9 @@ class InputViewController: UIViewController {
         //ナビゲーションバーの非表示
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         
+        //背景色の設定
+        //view.backgroundColor = UIColor(red: 1.0, green: 0.8, blue: 1.0, alpha: 0.2)
+        
         // 背景をタップしたらdismissKeyboardメソッドを呼ぶように設定する
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
