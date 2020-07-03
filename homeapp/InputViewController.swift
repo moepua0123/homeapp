@@ -14,6 +14,8 @@ class InputViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
     
+   
+    
     let realm = try! Realm()
     var save: Save!
     //@IBOutlet weak var handleDoneButton: UIButton!

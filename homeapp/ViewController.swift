@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -26,6 +26,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        SearchBar.delegate = self
+        SearchBar.enablesReturnKeyAutomatically = false
+        
         //ナビゲーションバーの色の設定
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 1.0, green: 0.8, blue: 1.0, alpha: 0.2)
         
@@ -123,8 +126,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
            //キャンセルを押した時に条件もない全部のタスクを表示する
-           saveArray = realm.objects(Save.self)
-           tableView.reloadData()//それで、再構築。
+           saveArray = realm.objects(Save.self).sorted(byKeyPath: "date", ascending: false)
+           tableView.reloadData()
            
     }
 
