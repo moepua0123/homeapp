@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9Ye-va-x6B">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="138" width="414" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="EXW-3y-utC" detailTextLabel="bqn-bd-b5t" style="IBUITableViewCellStyleValue1" id="EZa-z5-DVE">
@@ -45,11 +45,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OfA-ne-mte">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Ye-va-x6B" secondAttribute="trailing" id="3MJ-97-pD6"/>
-                            <constraint firstItem="9Ye-va-x6B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Mkd-9h-1Q2"/>
+                            <constraint firstItem="OfA-ne-mte" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4fH-wb-xah"/>
+                            <constraint firstItem="9Ye-va-x6B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Mkd-9h-1Q2"/>
+                            <constraint firstItem="OfA-ne-mte" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="h8h-9i-Ovx"/>
+                            <constraint firstItem="OfA-ne-mte" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jP4-tz-DiO"/>
                             <constraint firstItem="9Ye-va-x6B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o3h-Zj-JHn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="9Ye-va-x6B" secondAttribute="bottom" id="rGC-af-r3Y"/>
                         </constraints>
@@ -63,6 +70,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="SearchBar" destination="OfA-ne-mte" id="emH-y9-fYx"/>
                         <outlet property="tableView" destination="9Ye-va-x6B" id="5JO-Jv-xqb"/>
                         <segue destination="4DF-yy-Gyh" kind="show" identifier="cellSegue" id="iQU-q6-dMo"/>
                     </connections>

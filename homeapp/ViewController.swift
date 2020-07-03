@@ -15,6 +15,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let realm = try! Realm()
     
+    @IBOutlet weak var SearchBar: UISearchBar!
+    var searchResult = [String]()
+    
     var saveArray = try! Realm().objects(Save.self).sorted(byKeyPath: "date", ascending: false)
     
     
@@ -104,6 +107,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewWillAppear(animated)
         tableView.reloadData()
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    //サーチバーの設置
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+           print("")
+           //nameの中からサーチバーに書かれたテキストを検索する
+           let predicate = NSPredicate(format:  "name = %@",SearchBar.text!)
+           //taskArray（一覧）に検索結果を代入して、Table Viewを再構築する
+           saveArray = realm.objects(Save.self) .filter(predicate)
+           //tableViewにデータ表示する
+           tableView.reloadData()
+    }
+       
+       
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+           //キャンセルを押した時に条件もない全部のタスクを表示する
+           saveArray = realm.objects(Save.self)
+           tableView.reloadData()//それで、再構築。
+           
     }
 
 }
