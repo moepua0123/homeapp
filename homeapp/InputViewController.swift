@@ -14,30 +14,20 @@ class InputViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
     
-   
+   // バーボタンアイテムの宣言
+    var saveBarButtonItem: UIBarButtonItem!
     
     let realm = try! Realm()
     var save: Save!
-    //@IBOutlet weak var handleDoneButton: UIButton!
-    @IBAction func handleDoneButton(_ sender: Any) {
-        try! realm.write {
-            self.save.name = self.nameTextField.text!
-            self.save.contents = self.contentsTextView.text
-            //self.task.date = self.datePicker.date
-            self.realm.add(self.save, update: .modified)
-        }
-    }
-    
-    @IBAction func handleCancelButton(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
-    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //ナビゲーションバーの非表示
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
+        //バーボタンアイテムの初期化
+        saveBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(saveBarButtonTapped(_:)))
+        //バーボタンの設置
+        self.navigationItem.rightBarButtonItem = saveBarButtonItem
+       
         //背景色の設定
         //view.backgroundColor = UIColor(red: 1.0, green: 0.8, blue: 1.0, alpha: 0.2)
         
@@ -51,6 +41,18 @@ class InputViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    //doneボタンが押された時のメソッド
+    @objc func saveBarButtonTapped(_ sender: UIBarButtonItem){
+        try! realm.write {
+                   self.save.name = self.nameTextField.text!
+                   self.save.contents = self.contentsTextView.text
+                   //self.task.date = self.datePicker.date
+                   self.realm.add(self.save, update: .modified)
+               }
+        
+        self.performSegue(withIdentifier: "tothird", sender: nil)
+    }
+    
     
     override func viewWillDisappear(_ animated: Bool) {
         
