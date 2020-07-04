@@ -55,6 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let save = saveArray[indexPath.row]
         cell.textLabel?.text = save.name
         cell.detailTextLabel?.text = save.contents
+        cell.imageView?.image      = UIImage(named: "medal.jpeg")
         
         //let formatter = DateFormatter()
         //formatter.dateFormat = "yyyy-MM-dd HH:mm"

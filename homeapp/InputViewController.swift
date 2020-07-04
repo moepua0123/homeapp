@@ -24,7 +24,7 @@ class InputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //バーボタンアイテムの初期化
-        saveBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(saveBarButtonTapped(_:)))
+        saveBarButtonItem = UIBarButtonItem(title: "記録する", style: .done, target: self, action: #selector(saveBarButtonTapped(_:)))
         //バーボタンの設置
         self.navigationItem.rightBarButtonItem = saveBarButtonItem
        

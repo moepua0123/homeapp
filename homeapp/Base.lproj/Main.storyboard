@@ -63,6 +63,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="ほめ手帖" id="S7O-ZC-e74">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="eGA-eh-CHS"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="EjM-OQ-hE3">
                             <connections>
                                 <segue destination="4DF-yy-Gyh" kind="show" id="OFu-H3-tGn"/>
@@ -154,6 +155,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rNY-MH-9Uz">
+                                <rect key="frame" x="101" y="238" width="226" height="192"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Z9G-Fa-eHo"/>
@@ -161,6 +166,7 @@
                     <navigationItem key="navigationItem" id="jbd-78-aos"/>
                     <connections>
                         <outlet property="commentLabel" destination="bSm-fr-zCu" id="UCJ-Y4-kpa"/>
+                        <outlet property="imageView" destination="rNY-MH-9Uz" id="7p2-iA-l9B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhj-Xl-A7d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

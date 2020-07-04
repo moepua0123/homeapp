@@ -16,6 +16,12 @@
 		0CD31CA024ADD5C300DF98FA /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD31C9F24ADD5C300DF98FA /* InputViewController.swift */; };
 		0CD31CA224ADD9A500DF98FA /* Save.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD31CA124ADD9A500DF98FA /* Save.swift */; };
 		0CD31CA424ADE06400DF98FA /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD31CA324ADE06400DF98FA /* thirdViewController.swift */; };
+		0CD31CA824B0623600DF98FA /* medal.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CD31CA724B0623600DF98FA /* medal.jpeg */; };
+		0CD31CAA24B067A200DF98FA /* image01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CD31CA924B067A200DF98FA /* image01.jpeg */; };
+		0CD31CAC24B067BB00DF98FA /* image02.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CD31CAB24B067BB00DF98FA /* image02.jpeg */; };
+		0CD31CAE24B067CD00DF98FA /* image03.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0CD31CAD24B067CC00DF98FA /* image03.jpeg */; };
+		0CD31CB024B067DA00DF98FA /* image04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CD31CAF24B067DA00DF98FA /* image04.jpg */; };
+		0CD31CB224B067E700DF98FA /* image05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0CD31CB124B067E700DF98FA /* image05.jpg */; };
 		4B2E45BC15B50B71A5D5C2B9 /* Pods_homeapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E23AAE81AF1E4B5B3779C56B /* Pods_homeapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +37,12 @@
 		0CD31C9F24ADD5C300DF98FA /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		0CD31CA124ADD9A500DF98FA /* Save.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Save.swift; sourceTree = "<group>"; };
 		0CD31CA324ADE06400DF98FA /* thirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
+		0CD31CA724B0623600DF98FA /* medal.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = medal.jpeg; sourceTree = "<group>"; };
+		0CD31CA924B067A200DF98FA /* image01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image01.jpeg; sourceTree = "<group>"; };
+		0CD31CAB24B067BB00DF98FA /* image02.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image02.jpeg; sourceTree = "<group>"; };
+		0CD31CAD24B067CC00DF98FA /* image03.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image03.jpeg; sourceTree = "<group>"; };
+		0CD31CAF24B067DA00DF98FA /* image04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image04.jpg; sourceTree = "<group>"; };
+		0CD31CB124B067E700DF98FA /* image05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image05.jpg; sourceTree = "<group>"; };
 		5D152F40655962EAB8BBD608 /* Pods-homeapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homeapp.release.xcconfig"; path = "Target Support Files/Pods-homeapp/Pods-homeapp.release.xcconfig"; sourceTree = "<group>"; };
 		918BCD16F398081EE746C8E1 /* Pods-homeapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-homeapp.debug.xcconfig"; path = "Target Support Files/Pods-homeapp/Pods-homeapp.debug.xcconfig"; sourceTree = "<group>"; };
 		E23AAE81AF1E4B5B3779C56B /* Pods_homeapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_homeapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +81,12 @@
 		0CD31C8A24ADD3DB00DF98FA /* homeapp */ = {
 			isa = PBXGroup;
 			children = (
+				0CD31CB124B067E700DF98FA /* image05.jpg */,
+				0CD31CAF24B067DA00DF98FA /* image04.jpg */,
+				0CD31CAD24B067CC00DF98FA /* image03.jpeg */,
+				0CD31CAB24B067BB00DF98FA /* image02.jpeg */,
+				0CD31CA924B067A200DF98FA /* image01.jpeg */,
+				0CD31CA724B0623600DF98FA /* medal.jpeg */,
 				0CD31C8B24ADD3DB00DF98FA /* AppDelegate.swift */,
 				0CD31C8D24ADD3DB00DF98FA /* SceneDelegate.swift */,
 				0CD31C8F24ADD3DB00DF98FA /* ViewController.swift */,
@@ -160,7 +178,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD31CAE24B067CD00DF98FA /* image03.jpeg in Resources */,
+				0CD31CB024B067DA00DF98FA /* image04.jpg in Resources */,
+				0CD31CB224B067E700DF98FA /* image05.jpg in Resources */,
 				0CD31C9824ADD3DE00DF98FA /* LaunchScreen.storyboard in Resources */,
+				0CD31CAA24B067A200DF98FA /* image01.jpeg in Resources */,
+				0CD31CA824B0623600DF98FA /* medal.jpeg in Resources */,
+				0CD31CAC24B067BB00DF98FA /* image02.jpeg in Resources */,
 				0CD31C9524ADD3DE00DF98FA /* Assets.xcassets in Resources */,
 				0CD31C9324ADD3DB00DF98FA /* Main.storyboard in Resources */,
 			);
